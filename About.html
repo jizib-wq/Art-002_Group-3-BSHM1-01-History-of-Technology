@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - Alfred</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.alfred-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.alfred-box img {
+    width: 230px;
+    border-radius: 15px;
+}
+
+
+.bubble {
+    max-width: 520px;
+    height: 450px;
+
+    padding: 20px;
+
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    line-height: 1.6;
+
+    overflow-y: auto;
+}
+
+
+.bubble::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bubble::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bubble::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+
+hr {
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+.nav-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.35);
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="alfred-box">
+
+       
+        <img src="Guide.png" alt="Alfred">
+
+        
+        <div class="bubble">
+
+            <h2>About</h2>
+
+            <hr>
+
+            <p>
+                The history of technology is the story of how humans create tools and systems
+                to solve problems and improve their way of life. In the Philippines, this
+                history begins with early inventions such as stone tools, pottery, and weaving,
+                which helped ancient communities survive and adapt to their environment.
+            </p>
+
+            <p>
+                As time passed, technology developed further through trade, colonization,
+                and cultural exchange, leading to advancements in transportation,
+                communication, and industry.
+            </p>
+
+            <p>
+                In the modern and digital age, Filipino inventors and innovators continue to
+                contribute to technology through medical devices, communication systems,
+                and sustainable solutions.
+            </p>
+
+            <p>
+                The history of technology shows how creativity, knowledge, and necessity drive
+                innovation. It also highlights how technology is closely connected to culture,
+                shaping the way people live, communicate, and express themselves across
+                different periods of time.
+            </p>
+
+            
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="About2.html" class="nav-btn">Next</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

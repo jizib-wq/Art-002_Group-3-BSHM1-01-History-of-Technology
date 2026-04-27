@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("Significantbg.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+/* FIXED GRID */
+.images {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.image-box {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        5 Significant Artworks in Philippines Technological History
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+4. Digital and Tech-Based Art (Contemporary Philippines)<br><br>
+
+<b>(A). Interactive Installations</b><br><br>
+
+Artist:<br>
+Contemporary Filipino artists and designers who combine traditional materials with digital tools.<br><br>
+
+Meaning of the artwork:<br>
+These artworks show the connection between tradition and innovation, where old cultural practices meet new technology.<br><br>
+
+Cultural significance:<br>
+Interactive installations reflect the evolving identity of Filipino art in the modern world. They show that tradition is not lost but transformed through new technologies. By integrating indigenous elements like weaving into digital formats, artists preserve cultural heritage while making it appealing to contemporary audiences. These artworks also encourage participation, making viewers more engaged and connected to Filipino culture. This blending of old and new highlights the adaptability and creativity of Filipino artists.<br><br>
+
+Sources:<br>
+Overview of contemporary Philippine art and installations (NCCA):<br>
+https://ncca.gov.ph/about-culture-and-arts/culture-profile/philippine-art/<br><br>
+
+General discussion of interactive and modern Filipino art:<br>
+https://brainly.ph<br><br>
+
+<b>(B). Digital Photography (“Faces and Flora” by Jan Mayo)</b><br><br>
+
+Artist:<br>
+Jan Mayo<br><br>
+
+Meaning of the artwork:<br>
+It represents identity and connection to nature using digital tools.<br><br>
+
+Cultural significance:<br>
+Digital photography in the Philippines shows how modern artists express identity in a rapidly changing world. By combining nature and human elements, it reflects the Filipino connection to the environment and cultural roots. It also shows how technology has become a powerful tool for storytelling and self-expression. This type of art allows Filipino voices to reach a global audience, helping promote local culture internationally.<br><br>
+
+Sources:<br>
+Artist reference (limited available info, general digital art context):<br>
+https://www.instagram.com (search: Jan Mayo Faces and Flora)<br><br>
+
+Contemporary Philippine digital art overview:<br>
+https://ncca.gov.ph<br>
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('TechbaseA1.avif','Contemporary Filipino artist and designer who combine traditional materials with digital tools')">
+                <img src="TechbaseA1.avif">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('Kalanay44.jpeg','Interactive installation combining indigenous weaving patterns with modern LED lighting')">
+                <img src="Kalanay44.jpeg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('TechbaseB1.jpg','Faces and Flora digital artwork combining human portraits with nature using modern technology')">
+                <img src="TechbaseB1.jpg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('TechbaseB2.jpg','Jan Mayo, Filipino digital artist known for modern visual storytelling')">
+                <img src="TechbaseB2.jpg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+<div class="nav-buttons">
+    <a href="Significant3.html" class="nav-btn">Back</a>
+    <a href="Significant5.html" class="nav-btn">Next</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

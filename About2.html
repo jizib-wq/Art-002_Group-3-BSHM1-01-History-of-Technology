@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - Alfred</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.alfred-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.alfred-box img {
+    width: 230px;
+    border-radius: 15px;
+}
+
+
+.bubble {
+    max-width: 520px;
+    height: 450px;
+
+    padding: 20px;
+
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    line-height: 1.6;
+
+    overflow-y: auto;
+}
+
+
+.bubble::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bubble::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bubble::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+
+hr {
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+.nav-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.35);
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="alfred-box">
+
+        
+        <img src="Guide.png" alt="Alfred">
+
+        
+        <div class="bubble">
+
+            <h2>About</h2>
+
+            <hr>
+
+            <p>
+                Featured Art Exhibition<br><br>
+
+                Exhibition Theme: “History of Technology”<br>
+                Exhibition Date: April 25 to April 26, 2026<br><br>
+
+                This exhibit explores the theme of the History of Technology in the Philippines, highlighting how innovation has evolved from ancient tools to modern digital advancements.<br><br>
+
+                The selected artworks and technologies were chosen because they represent important stages in Filipino creativity, survival, and progress—from indigenous craftsmanship like pottery and weaving to modern innovations such as digital art and scientific inventions.<br><br>
+
+                Each piece reflects how Filipinos have continuously adapted to their environment and used technology to improve daily life.<br><br>
+
+                Through this exhibit, viewers are encouraged to understand that technology is not only about machines but also about culture, identity, and human ingenuity.<br><br>
+
+                It aims to inspire appreciation for Filipino contributions to technology and to create a sense of pride in how the past connects to the present and future.
+            </p>
+
+
+            <div class="nav-buttons">
+                <a href="About.html" class="nav-btn">Back</a>
+                <a href="gallery.html" class="nav-btn">Continue to Gallery</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
